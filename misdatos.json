@@ -55,6 +55,13 @@
       "fecha": "17/04/2022",
       "hora": "09:00",
       "recordatorio": false
+    },
+    {
+      "texto": "pruebahora",
+      "fecha": "2024-01-26",
+      "hora": "18:48",
+      "recordatorio": true,
+      "id": 1704732494200
     }
   ]
 }

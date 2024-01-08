@@ -9,12 +9,23 @@ import {Tarea} from "../../models/Tarea";
 })
 export class AddTareaComponent implements OnInit {
 
-  tarea: Tarea = {texto: "hola", fecha:"",hora: "00", recordatorio: true, id: Date.now()};
+  tarea: Tarea = {texto: "", fecha:"",hora: this.obtenerHora(), recordatorio: true, id: Date.now()};
 
   constructor(private tareaService: TareaService) { }
 
   ngOnInit(): void {
 
+  }
+  obtenerHora() {
+    const fechaActual = new Date();
+    const horas = fechaActual.getHours();
+    const minutos = fechaActual.getMinutes();
+
+    // Formatear la hora en formato de 24 horas
+    return `${this.agregarCeroDelante(horas)}:${this.agregarCeroDelante(minutos)}`;
+  }
+  agregarCeroDelante(numero: number): string {
+    return numero < 10 ? `0${numero}` : `${numero}`;
   }
 
   submit(): void {
