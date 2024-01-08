@@ -1,0 +1,16 @@
+
+
+<form  #f="ngForm">
+  <div class="form-group">
+    <label for="titulo">Título</label>
+    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="tarea.texto" required value="{{tarea.texto}}">
+  </div>
+  <div class="form-group">
+    <label for="fecha">Fecha</label>
+    <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]="tarea.fecha" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Unpublished</button>
+  <button (click)="delete()" class="btn btn-danger">Delete</button>
+  <button (click)="updateTarea()" class="btn btn-success">Update</button>
+</form>
+

@@ -1,0 +1,22 @@
+<div id="lista">
+  <section *ngIf="post$ | async as tareas; else loader">
+    <div class="row">
+      <div class="col-md-6"> <!-- Ajusta la clase de la columna según tus necesidades -->
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let tarea of tareas"
+              [ngClass]="{'list-group-item-action active': tarea === selectedTarea}"
+              (click)="onSelect(tarea)">
+            {{tarea.texto}}
+            <i class="bi bi-pencil float-end"></i>
+          </li>
+        </ul>
+        <button class="btn btn-danger ms-auto" (click)="borrar()">Eliminar todas</button>
+      </div>
+      <div class="col-md-6"> <!-- Ajusta la clase de la columna según tus necesidades -->
+        <app-tarea-detail [tarea]="selectedTarea"></app-tarea-detail>
+      </div>
+    </div>
+  </section>
+</div>
+
+<ng-template #loader>No hay tareas</ng-template>

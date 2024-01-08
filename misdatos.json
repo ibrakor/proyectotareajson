@@ -1,0 +1,60 @@
+{
+  "tareas": [
+    {
+      "id": 3,
+      "texto": "Reunión en la Oficina",
+      "fecha": "10/12/2021",
+      "hora": "15:45",
+      "recordatorio": false
+    },
+    {
+      "id": 4,
+      "texto": "Revisión del Coche",
+      "fecha": "20/12/2021",
+      "hora": "10:00",
+      "recordatorio": true
+    },
+    {
+      "id": 6,
+      "texto": "Comprar Regalos de Navidad",
+      "fecha": "24/12/2021",
+      "hora": "09:00",
+      "recordatorio": false
+    },
+    {
+      "id": 7,
+      "texto": "Comprar Regalos de Reyes",
+      "fecha": "05/01/2022",
+      "hora": "09:00",
+      "recordatorio": false
+    },
+    {
+      "id": 8,
+      "texto": "Comprar Regalos de Cumpleaños",
+      "fecha": "15/01/2022",
+      "hora": "09:00",
+      "recordatorio": false
+    },
+    {
+      "id": 9,
+      "texto": "Comprar Regalos de Aniversario",
+      "fecha": "25/01/2022",
+      "hora": "09:00",
+      "recordatorio": false
+    },
+    {
+      "id": 10,
+      "texto": "Comprar Regalos de San Valentín",
+      "fecha": "14/02/2022",
+      "hora": "09:00",
+      "recordatorio": false
+    },
+    {
+      "id": 11,
+      "texto": "Comprar Regalos de Pascua",
+      "fecha": "17/04/2022",
+      "hora": "09:00",
+      "recordatorio": false
+    }
+  ]
+}

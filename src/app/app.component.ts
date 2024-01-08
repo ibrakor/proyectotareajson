@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {TareaService} from "./services/tarea.service";
+import {Tarea} from "./models/Tarea";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyectotareajson';
+
 }

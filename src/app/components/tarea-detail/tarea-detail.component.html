@@ -1,0 +1,7 @@
+<h1>Tarea</h1>
+<section *ngIf="tarea">
+  <p><strong>Titulo:</strong> {{tarea.texto}}</p>
+  <p><strong>Fecha:</strong> {{tarea.fecha}}</p>
+  <p><strong>Estado:</strong> {{tarea.recordatorio}}</p>
+  <button routerLink="/update-task/{{tarea.id}}" class="btn btn-warning">Editar</button>
+</section>
