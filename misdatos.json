@@ -44,7 +44,7 @@
     },
     {
       "id": 10,
-      "texto": "Comprar Regalos de San Valentín",
+      "texto": "probando",
       "fecha": "14/02/2022",
       "hora": "09:00",
       "recordatorio": false
@@ -55,13 +55,6 @@
       "fecha": "17/04/2022",
       "hora": "09:00",
       "recordatorio": false
-    },
-    {
-      "texto": "pruebahora",
-      "fecha": "2024-01-26",
-      "hora": "18:48",
-      "recordatorio": true,
-      "id": 1704732494200
     }
   ]
 }

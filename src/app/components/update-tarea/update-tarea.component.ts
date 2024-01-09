@@ -31,7 +31,8 @@ export class UpdateTareaComponent {
 
   updateTarea(): void {
     this.tareaService.updateTarea(this.tarea)
-      .subscribe();
+      .subscribe(()=>
+        this.goBack());
   }
   delete(){
     this.tareaService.deleteTareaById(this.tarea.id).subscribe(()=>
