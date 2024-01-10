@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {delay, Observable, tap} from "rxjs";
+import {Observable} from "rxjs";
 import {Tarea} from "../models/Tarea";
 
 @Injectable({
@@ -36,5 +36,10 @@ export class TareaService {
   deleteTareaById(id: number): Observable<any> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete(url);
+  }
+
+  changePublished(tarea: Tarea) {
+    tarea.recordatorio = !tarea.recordatorio;
+    this.updateTarea(tarea)
   }
 }

@@ -1,4 +1,4 @@
-import {Component, Input, signal} from '@angular/core';
+import {Component} from '@angular/core';
 import {Tarea} from "../../models/Tarea";
 import {ActivatedRoute} from "@angular/router";
 import {TareaService} from "../../services/tarea.service";
@@ -11,6 +11,8 @@ import {Location} from "@angular/common";
 })
 export class UpdateTareaComponent {
   tarea: Tarea;
+  updateText: string
+
 
   constructor(
     private route: ActivatedRoute,
@@ -43,4 +45,18 @@ export class UpdateTareaComponent {
   goBack(): void {
     this.location.back();
   }
+
+  showPublished(): string {
+    if (this.tarea.recordatorio) {
+      this.updateText = "Unpublished"
+      return "Published"
+    } else
+      this.updateText = "Published"
+    return "Unpublished"
+  }
+
+  changeStatus() {
+    this.tareaService.changePublished(this.tarea)
+  }
+
 }
